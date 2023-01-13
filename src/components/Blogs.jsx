@@ -5,40 +5,42 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
+import { dataBlog } from "./DataBlog";
+import CardBlog from "./CardBlog";
 import Title from "./Title";
-import { dataShop } from "./DataShop";
-import CardShop from "./CardShop";
 
-const Shop = () => {
+const Blogs = () => {
   return (
     <div className="w-full px-8 py-12">
       <div className="max-w-[1100px] mx-auto">
-        <Title title="Featured Products" />
+        <Title title="Our Daily Posts" />
         <Swiper
           modules={[Navigation]}
           navigation
-          spaceBetween={30}
+          spaceBetween={50}
           loop={true}
+          className="w-[65%] md:w-[80%] lg:w-full swiper__blogs"
           breakpoints={{
             0: {
               slidesPerView: 1,
             },
-            768: {
+            769: {
               slidesPerView: 2,
             },
-            1024: {
-              slidesPerView: 4,
+            1025: {
+              slidesPerView: 3,
             },
           }}
-          className="w-[60%] md:w-[70%] lg:w-full"
         >
-          {dataShop.map((item, index) => {
+          {dataBlog.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <CardShop
-                  product={item.product}
+                <CardBlog
                   url={item.url}
-                  price={item.price}
+                  title={item.title}
+                  text={item.text}
+                  person={item.person}
+                  date={item.date}
                 />
               </SwiperSlide>
             );
@@ -49,4 +51,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Blogs;

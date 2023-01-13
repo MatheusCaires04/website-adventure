@@ -7,6 +7,7 @@ module.exports = {
         greyDark: "#10221b",
         green: "#219150",
         greyLight: "#aaa",
+        grey: "#eee",
       },
       boxShadow: {
         box: "0 0.5rem 1rem rgba(0, 0, 0, 0.1)",

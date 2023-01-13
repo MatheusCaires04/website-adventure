@@ -1,12 +1,13 @@
 import React from "react";
 import CardAdventure from "./CardAdventure";
 import { dataAdventure } from "./DataAdventure";
+import Title from "./Title";
 
 const Adventure = () => {
   return (
     <div className="w-full">
       <div className="max-w-[1100px] mx-auto py-8">
-        <h1 className="text-4xl font-bold text-center">Adventure Idea!</h1>
+        <Title title="Adventure Idea!" />
         <div className="mt-8 md:mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {dataAdventure.map((item, index) => {
             return (

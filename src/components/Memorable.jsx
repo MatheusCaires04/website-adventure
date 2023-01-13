@@ -4,7 +4,7 @@ import image from "/assets/about-img.jpg";
 
 const Memorable = () => {
   return (
-    <div className="bg-greyLight w-full pt-8 pb-16 px-8">
+    <div className="bg-grey w-full pt-8 pb-16 px-8">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0">
         <div className="flex items-center justify-center md:justify-start">
           <img

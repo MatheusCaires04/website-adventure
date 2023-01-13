@@ -8,6 +8,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+.swiper {
+  @apply cursor-grab;
+}
+
 .swiperSecond1 > div {
   align-items: flex-start !important;
 }
@@ -22,4 +26,83 @@ html {
   .swiper-button-prev::after {
     font-size: 20px;
   }
+}
+
+.swiper__reviews > .swiper-button-next::after,
+.swiper__reviews > .swiper-button-prev::after {
+  @apply hidden;
+}
+
+.card__packages:hover > div > span,
+.card__packages:hover > div > p,
+.card__packages:hover > div > button {
+  @apply text-white;
+}
+
+.card__packages:hover > div > button {
+  @apply border-white;
+}
+
+.card__packages > div > button:hover {
+  @apply text-black bg-white;
+}
+
+.text__comment::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+
+.card__services:hover {
+  @apply bg-greyDark;
+}
+
+.card__services:hover > img {
+  @apply invert;
+}
+
+.card__services:hover > span,
+.card__services:hover > p,
+.card__services:hover > button {
+  @apply text-white;
+}
+
+.card__services:hover > button {
+  @apply border-white;
+}
+
+.card__services > button:hover {
+  @apply text-greyDark bg-white;
+}
+
+.swiper__blogs > .swiper-button-next::after,
+.swiper__blogs > .swiper-button-prev::after {
+  @apply hidden;
+}
+
+.swiper__clients > .swiper-button-next::after,
+.swiper__clients > .swiper-button-prev::after {
+  @apply hidden;
+}
+
+.background__footer {
+  background: url("/assets/footer-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background__footer > div > ul > div > li {
+  @apply mb-2 justify-center md:justify-start;
+}
+.background__footer > div > ul > div > li > a {
+  @apply font-normal text-xs hover:text-green duration-150;
+}
+
+.background__footer > div > ul > div {
+  @apply flex flex-col text-center md:text-start;
 }
